@@ -1,0 +1,4 @@
+/* Base style for all list items */
+li {
+ color: black;
+}
