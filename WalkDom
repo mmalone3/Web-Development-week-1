@@ -1,0 +1,11 @@
+function walkDOM(node, func) {
+ func(node); // Perform the action on the current node
+ node.childNodes.forEach(child => walkDOM(child, func)); // Recursively call walkDOM on child nodes
+}
+
+// Example usage: Replace the text of all text nodes
+walkDOM(document.body, node => {
+ if (node.nodeType === Node.TEXT_NODE) {
+    node.textContent = "patrick dw is sooooo good looking";
+ }
+});
