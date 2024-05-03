@@ -1,0 +1,12 @@
+function styleNestedList(element, depth = 1) {
+ // Apply a different color based on the depth
+ element.style.color = depth % 2 === 0 ? 'blue' : 'red';
+
+ // Recursively style child lists
+ const childLists = element.querySelectorAll('ul');
+ childLists.forEach(list => styleNestedList(list, depth + 1));
+}
+
+// Start the recursion from the top-level list
+const topLevelList = document.getElementById('nestedList');
+styleNestedList(topLevelList);
