@@ -1,0 +1,14 @@
+function styleElementsByDepth(element, depth = 1) {
+ // Apply a background color based on the depth
+ element.style.backgroundColor = `hsl(${depth * 30}, 100%, 50%)`;
+
+ // Recursively style child elements
+ const childElements = element.children;
+ for (let i = 0; i < childElements.length; i++) {
+    styleElementsByDepth(childElements[i], depth + 1);
+ }
+}
+
+// Start the recursion from the top-level container
+const container = document.getElementById('container');
+styleElementsByDepth(container);
