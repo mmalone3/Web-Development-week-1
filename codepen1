@@ -1,0 +1,6 @@
+<button class= "click me">click me</button>
+<section class= "hidden">
+  <h1>look what I'm learning</h1>
+  <p> when clicked a button will reveal text</p>
+  <p> click again and the text will hide away</p>
+</section>
